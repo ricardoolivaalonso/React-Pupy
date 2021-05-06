@@ -1,0 +1,50 @@
+.features{
+    &__item{
+        padding: 32px 16px 40px;
+        text-align: center;
+        border-radius: 18px;
+        cursor: pointer;
+
+        &:hover{ transition: background-color $transition; }
+
+        &--red:hover{ background-color: rgba($red-card, .05); }
+        &--yellow:hover{ background-color: rgba($yellow-card, .05); }
+        &--blue:hover{ background-color: rgba($blue-card, .05); }
+        &--pink:hover{ background-color: rgba($pink-card, .05); }
+    }
+        &__bg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 80px;
+            height: 70px;
+            margin: 0 auto;
+            border-radius: 43% 57% 45% 55% / 49% 45% 55% 51%  ;
+
+            &--red{ background-color: $red-card; }
+            &--yellow{ background-color: $yellow-card; }
+            &--blue{ background-color: $blue-card; }
+            &--pink{ background-color: $pink-card; }
+
+            @media (max-width: $mq-1150){ 
+                width: 90px;
+                height: 80px;
+            }
+        }
+            &__icon{
+                width: 30px;
+                object-fit: contain;
+
+                @media (max-width: $mq-1150){ width: 35px; }
+            }
+        &__title{
+            @include f-ftitle();
+            max-width: 216px;
+            margin: 20px auto 12px;
+            
+            @media (max-width: $mq-1150){ max-width: 250px; }
+            @media (max-width: $mq-560){ max-width: 100%; }
+        }
+        &__description{ @include f-description(); }
+}

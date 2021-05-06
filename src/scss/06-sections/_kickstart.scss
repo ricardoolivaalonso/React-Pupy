@@ -1,0 +1,27 @@
+.kickstart{
+    &-container{
+        width: 100%;
+        max-width: var(--max-width);
+        padding: 0 var(--gap-h);
+    }
+
+    &__info{
+        margin-bottom: 48px;
+        text-align: center;
+    }
+        &__title{ @include f-ttitle(); }
+        &__description{
+            @include f-description();
+            margin: 16px 0 48px;
+        }
+        &__link:not(:last-child){ margin-right: 15px; }
+        &__media{
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+            &__img{ 
+                width: 100%;
+                @media(max-width: $mq-770){ width: 300%; }
+            } 
+}

@@ -1,0 +1,78 @@
+@mixin flex($display, $justify, $align, $direction, $wrap) {
+	display: $display;
+	justify-content: $justify;
+	align-items: $align;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+}
+
+@mixin f-link(){
+	font-family: 'Cabin-SemiBold';
+	font-size: 16px;
+	line-height: 1;
+	transition: color $transition;
+
+	&.active,
+	&:hover{
+		color: $orange;
+		transition: color $transition;
+	}
+}
+@mixin f-mtitle(){
+	font-family: 'Cabin-Bold';
+	font-size: 56px;
+	line-height: 1.1;
+
+	@media (max-width: $mq-960){ font-size: 48px; }
+	@media (max-width: $mq-770){ font-size: 40px; }
+}
+@mixin f-ftitle(){
+	font-family: 'Cabin-Bold';
+	font-size: 24px;
+    line-height: 1.34;
+
+	@media( max-width: $mq-770){ font-size: 18px; }
+}
+@mixin f-description(){
+	font-family: 'Inter-Regular';
+	font-size: 18px;
+	line-height: 1.45;
+	color: $gray;
+
+	@media (max-width: $mq-770){ font-size: 16px; }
+}
+@mixin f-ptitle(){
+	font-family: 'Cabin-Bold';
+	font-size: 22px;
+	line-height: 1.28;
+	color: $orange;
+
+	@media (max-width: $mq-1150){ 
+		width: 100%; 
+		padding-right: 0;
+	}
+}
+@mixin f-psubtitle(){
+	font-family: 'Cabin-Bold';
+	font-size: 36px;
+	line-height: 1.22;
+	color: $black;
+
+	@media (max-width: $mq-770){  font-size: 24px; }
+}
+@mixin f-tdescription(){
+	font-family: 'Inter-Regular';
+	font-size: 22px;
+	line-height: 1.45;
+	color: $gray;
+
+	@media (max-width: $mq-640){ font-size: 18px; line-height: 2; }
+}
+@mixin f-ttitle(){
+	font-family: 'Cabin-Bold';
+	font-size: 42px;
+	line-height: 1.22;
+	color: $black;
+
+	@media (max-width: $mq-960){ font-size: 36px; }
+}

@@ -1,0 +1,15 @@
+body,
+#root{
+    font-family: 'Cabin-Regular';
+    font-size: 16px;
+	font-weight: 400;
+    background-color: $white;
+    width: 100%;
+    
+}
+ul{ list-style: none; }
+a{
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+}

@@ -1,0 +1,16 @@
+.footer{
+    &__logo{
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: $mq-640){ margin-bottom: 20px; }
+    }
+    &__description{
+        @include f-description();
+        font-size: 12px;
+        text-align: right;
+        line-height: 1.6;
+
+        @media (max-width: $mq-640){ text-align: center; }
+    }
+}

@@ -1,0 +1,33 @@
+.header{
+    &-container{
+        @include flex(flex, space-between, center, row, nowrap);
+        max-width: var(--max-width);
+        width: 100%;
+        padding: 0 var(--gap-h);
+    }
+        &__trigger{ 
+            background-color: transparent;
+            border: none;
+            @media (min-width: $mq-560){ display: none; }
+        }
+        &-menu{
+            transition: 
+                visibility 300ms linear, 
+                opacity 300ms linear
+            ;
+            @media (max-width: $mq-560){ 
+                position: absolute;
+                width: 100%;
+                top: 65px;
+                left: 0;
+                padding: calc(var(--gap-h)*2) var(--gap-h);
+                visibility: hidden;
+                opacity: 0;
+                background-color: rgba(lighten($orange, 30), .975);
+                backdrop-filter: blur(5px);
+            }
+            &__list{ display: flex; }
+            &__item:not(:last-child){ margin-right: 40px; }
+            &__link{ @include f-link(); }
+        }
+}

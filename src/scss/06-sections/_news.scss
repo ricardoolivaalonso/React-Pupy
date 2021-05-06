@@ -1,0 +1,16 @@
+.news{
+    &-container{
+        max-width: var(--max-width);
+        padding: 0 var(--gap-h);
+        width: 100%;
+    }
+    &-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        padding-top: 16px;
+
+        @media (max-width: $mq-1150){ grid-template-columns: 1fr 1fr; }  
+        @media (max-width: $mq-770){ grid-template-columns: 1fr; }  
+    }
+}

@@ -1,0 +1,65 @@
+.form{
+    &-contact{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 24px;
+        padding-top: 16px;
+
+        @media (max-width: $mq-560){ 
+            grid-template-columns: 1fr; 
+            grid-gap: 16px;
+        }
+        &__textarea,
+        &__input{
+            width: 100%;
+            height: 48px;
+            outline: none;
+
+            padding: 0px 20px;
+            border-radius: 8px;
+            background: $white;
+
+            font-family: 'Inter-Regular';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: $black;
+            box-shadow:  0px 1px 2px rgba($gray, .15);
+            border: 1.5px solid rgba($gray, 0.5);
+
+            &:focus{
+                border: 1.5px solid $orange;
+                box-shadow:  0px 2px 3px rgba($gray, .15);
+            }
+        }
+        &__textarea{
+            grid-column: 1/-1;
+            min-height: 150px;
+            padding: 14px 20px;
+            resize: none;
+        }
+        &__submit{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 146px;
+            height: 42px;
+
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 15px;
+            border-radius: 8px;
+            border-bottom: 3px solid darken($orange, 10);
+            border-top: 3px solid transparent;
+            box-shadow:  0px 1px 2px rgba($gray, .15);
+            color: $white;
+            background-color: $orange;
+
+            &:active{
+                border-bottom: 0 solid transparent;
+                transition: $transition;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.benefits{
+    &__card{
+        &-bg{
+            height: 100%;
+            max-height: 210px;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid darken($bg, 5);
+        }
+            &-img{
+                max-width: 100%;
+                width: 100%;
+                object-fit: cover;
+
+                @media (max-width: $mq-960){ height: 100%;  }
+            }
+        &-title{
+            @include f-ptitle();
+            margin-top: 20px;
+            color: $black;
+        }
+        &-description{
+            @include f-description();
+            font-size: 16px;
+            margin-top: 4px;
+        }
+    }
+}

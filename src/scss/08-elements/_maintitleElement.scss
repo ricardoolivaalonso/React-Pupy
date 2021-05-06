@@ -1,0 +1,5 @@
+.main-title{
+    @include f-mtitle();
+    max-width: 424px;
+    margin-bottom: 32px;
+}

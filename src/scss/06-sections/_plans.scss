@@ -1,0 +1,42 @@
+.plans{
+    &__item{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        place-items: center;
+        margin: 20px 0;
+
+        @media (max-width: $mq-1150){ flex-direction: column-reverse;  }
+
+        &--reverse{ 
+            flex-direction: row-reverse; 
+            @media (max-width: $mq-1150){ 
+                flex-direction: column-reverse;  
+                justify-content: flex-end;
+            }
+        }
+    }
+    &__info{
+        width: 50%;
+        padding-right: calc(var(--grid-gap) / 2);
+
+        @media (max-width: $mq-1150){ 
+            width: 100%; 
+            padding-right: 0;
+        }
+    }
+        &__title{ @include f-ptitle(); }
+        &__subtitle{
+            @include f-psubtitle();
+            margin: 12px 0 20px;
+        }
+        &__description{ @include f-description(); }
+    
+    &__media{
+        width: 50%;
+        @media (max-width: $mq-1150){  width: 100%; }
+        @media (max-width: $mq-770){  width: 50%; }
+        @media (max-width: $mq-560){  width: 100%; }
+    }
+    &__img{ max-width: 100%; }
+}

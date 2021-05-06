@@ -1,0 +1,13 @@
+.is-header-visible{
+    height: 65px;
+    border-bottom: 1.5px solid rgba($gray, 0.125);
+    transition: height 300ms linear;
+}
+.is-menu-visible{
+    visibility: visible;
+    opacity: 1;
+    transition: 
+        visibility 300ms linear, 
+        opacity 300ms linear
+    ;
+}

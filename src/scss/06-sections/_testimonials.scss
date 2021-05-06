@@ -1,0 +1,18 @@
+.testimonials{
+    &__info{
+        margin-bottom: 48px;
+        text-align: center
+    }
+        &__subtitle{
+            @include f-tdescription();
+        }
+        &__title{ @include f-ttitle(); }
+    &__cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+
+        @media (max-width: $mq-1150){ grid-template-columns: 1fr 1fr; }
+        @media (max-width: $mq-960){ grid-template-columns: 1fr; }
+    }    
+}

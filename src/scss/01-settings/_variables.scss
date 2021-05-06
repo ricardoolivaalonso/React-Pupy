@@ -1,0 +1,34 @@
+$mq-1400: 1400px;
+$mq-1150: 1150px;
+$mq-960: 960px;
+$mq-770: 770px;
+$mq-640: 640px;
+$mq-560: 560px;
+
+:root{
+    --grid-gap: 48px;
+    --gap-h: 40px;
+    --max-width: calc(1200px + (var(--gap-h) * 2) );
+
+    @media (max-width: $mq-1400){ --gap-h: 80px; }
+    @media (max-width: $mq-1150){ --gap-h: 60px; }
+    @media (max-width: $mq-960){ --gap-h: 50px; }
+    @media (max-width: $mq-770){ --gap-h: 40px; }
+    @media (max-width: $mq-560){ --gap-h: 15px; }
+
+}
+
+$black: #000000;
+$white: #ffffff;
+$gray: #747476;
+$orange: #ff7154;
+$bg: #F6F6F6;
+
+$red-card: #FF7154;
+$yellow-card: #FFBD2D;
+$blue-card: #3A3E5C;
+$pink-card: #FC5C7B;
+
+$transition: 0.1s ease;
+
+

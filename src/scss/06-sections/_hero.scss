@@ -1,0 +1,43 @@
+.hero{
+    &-info{
+        max-width: 486px;
+        min-width: 364px;
+        margin-top: 80px;
+
+        @media (max-width: $mq-1400){ margin-top: 70px;}
+        @media (max-width: $mq-1150){ margin-top: 60px;}
+        @media (max-width: $mq-960){ margin-top: 40px;}
+	    @media (max-width: $mq-770){ margin-top: 25px; }
+	    @media (max-width: $mq-560){ 
+            margin-top: 0; 
+            min-width: 100%;
+        }
+    }
+        &-app{ 
+            max-width: 100%;
+            overflow: hidden;
+            margin-top: var(--grid-gap); 
+        }
+        &__title{
+            // @include f-mtitle();
+            // max-width: 424px;
+            // margin-bottom: 32px;
+        }
+        &__description{ @include f-description(); }
+        &__link:not(:last-child){ margin-right: 16px; }
+
+    &-media{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        max-width: 100%;
+    }
+        &__video{ 
+            width: 100%;
+            max-width: 400px;
+            object-fit: contain;
+            @media (max-width: $mq-960){ max-width: 60%; }
+            @media (max-width: $mq-560){ max-width: 100%; }
+
+        }
+}
