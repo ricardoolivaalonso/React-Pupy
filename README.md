@@ -1,7 +1,7 @@
 #### Page based on the official website of pupy available until 2021.
 ##### Main skills
 - responsive design
-- mobile first
+- desktop first
 - react
 - sass
 - bem
